@@ -13,5 +13,96 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\fonts">
+      <UniqueIdentifier>{992dd6dc-8b79-4dc5-80b4-d26b5121dbd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\graphics">
+      <UniqueIdentifier>{c45a35d9-8ec7-405d-9e33-74f5d58139c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\sound">
+      <UniqueIdentifier>{583455ba-355a-4c03-ac81-a8b4fac898ae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\graphics\ammo_icon.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\ammo_pickup.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\background 1280-720.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\background.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\background_sheet.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\bloater.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\blood.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\chaser.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\crawler.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\crosshair.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\health_pickup.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\player.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\sample.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="resources\sound\hit.wav">
+      <Filter>Resource Files\sound</Filter>
+    </Media>
+    <Media Include="resources\sound\pickup.wav">
+      <Filter>Resource Files\sound</Filter>
+    </Media>
+    <Media Include="resources\sound\powerup.wav">
+      <Filter>Resource Files\sound</Filter>
+    </Media>
+    <Media Include="resources\sound\reload.wav">
+      <Filter>Resource Files\sound</Filter>
+    </Media>
+    <Media Include="resources\sound\reload_failed.wav">
+      <Filter>Resource Files\sound</Filter>
+    </Media>
+    <Media Include="resources\sound\shoot.wav">
+      <Filter>Resource Files\sound</Filter>
+    </Media>
+    <Media Include="resources\sound\splat.wav">
+      <Filter>Resource Files\sound</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\fonts\zombiecontrol.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
   </ItemGroup>
 </Project>

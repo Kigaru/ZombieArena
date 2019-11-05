@@ -1,2 +1,3 @@
-
+#ignore these directories
 .vs/
+Debug/

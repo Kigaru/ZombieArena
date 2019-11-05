@@ -46,11 +46,13 @@
     <Media Include="resources\sound\splat.wav" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\createBackground.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\player.h" />
+    <ClInclude Include="src\ZombieArena.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

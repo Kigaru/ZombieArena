@@ -1,5 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "player.h"
+#include "ZombieArena.h"
+#include <iostream>
 
 using namespace sf;
 
@@ -34,6 +36,15 @@ int main()
 	Player player;
 	IntRect arena;
 
+	//create bg
+	VertexArray background;
+
+	//Load the texture for bg va
+	Texture textureBackground;
+
+	textureBackground.loadFromFile("resources/graphics/background_sheet.png");
+
+
 	//game loop
 	while (window.isOpen())
 	{
@@ -65,41 +76,6 @@ int main()
 				{
 					window.close();
 				}
-				if (state == State::PLAYING)
-				{
-					if (Keyboard::isKeyPressed(Keyboard::W))
-					{
-						player.moveUp();
-					}
-					else
-					{
-						player.stopUp();
-					}
-					if (Keyboard::isKeyPressed(Keyboard::S))
-					{
-						player.moveDown();
-					}
-					else
-					{
-						player.stopDown();
-					}
-					if (Keyboard::isKeyPressed(Keyboard::A))
-					{
-						player.moveLeft();
-					}
-					else
-					{
-						player.stopLeft();
-					}
-					if (Keyboard::isKeyPressed(Keyboard::D))
-					{
-						player.moveRight();
-					}
-					else
-					{
-						player.stopRight();
-					}
-				}// end is playing movement
 				else if (state == State::LEVELING_UP)
 				{
 					if (event.key.code == Keyboard::Num1)
@@ -134,7 +110,7 @@ int main()
 						arena.left = 0;
 						arena.top = 0;
 
-						int tileSize = 50; //updated later
+						int tileSize = createBackground(background, arena);
 
 						//spawn player in the middle
 						player.spawn(arena, resolution, tileSize);
@@ -145,7 +121,43 @@ int main()
 			}// end is key pressed
 		}// end of polling
 
+		if (state == State::PLAYING)
+		{
+			if (Keyboard::isKeyPressed(Keyboard::W))
+			{
+				player.moveUp();
+			}
+			else
+			{
+				player.stopUp();
+			}
+			if (Keyboard::isKeyPressed(Keyboard::S))
+			{
+				player.moveDown();
+			}
+			else
+			{
+				player.stopDown();
+			}
+			if (Keyboard::isKeyPressed(Keyboard::A))
+			{
+				player.moveLeft();
+			}
+			else
+			{
+				player.stopLeft();
+			}
+			if (Keyboard::isKeyPressed(Keyboard::D))
+			{
+				player.moveRight();
+			}
+			else
+			{
+				player.stopRight();
+			}
+		}// end is playing movement
 		
+
 		/*
 		****************
 		UPDATE THE FRAME
@@ -183,6 +195,7 @@ int main()
 
 			window.setView(mainView);
 
+			window.draw(background, &textureBackground);
 			window.draw(player.getSprite());
 		}
 		if (state == State::LEVELING_UP)

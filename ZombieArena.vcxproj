@@ -49,10 +49,12 @@
     <ClCompile Include="src\createBackground.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\player.cpp" />
+    <ClCompile Include="TextureHolder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\player.h" />
     <ClInclude Include="src\ZombieArena.h" />
+    <ClInclude Include="TextureHolder.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -2,11 +2,13 @@
 #include "player.h"
 #include "ZombieArena.h"
 #include <iostream>
-
+#include "TextureHolder.h"
 using namespace sf;
 
 int main() 
 {
+	TextureHolder holder;
+
 	enum class State
 	{
 		PAUSED, LEVELING_UP, GAME_OVER, PLAYING
@@ -40,9 +42,11 @@ int main()
 	VertexArray background;
 
 	//Load the texture for bg va
-	Texture textureBackground;
+	Texture textureBackground = TextureHolder::GetTexture("resources/graphics/background_sheet.png");
 
-	textureBackground.loadFromFile("resources/graphics/background_sheet.png");
+	int numZombies = 0;
+	int numZombiesAlive = 0;
+	Zombie* zombies = nullptr;
 
 
 	//game loop
@@ -115,6 +119,10 @@ int main()
 						//spawn player in the middle
 						player.spawn(arena, resolution, tileSize);
 
+						numZombies = 10;
+						delete[] zombies;
+						zombies = createHorde(numZombies, arena);
+						numZombiesAlive = numZombies;
 						clock.restart();
 					}
 				}// end leveling up

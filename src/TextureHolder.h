@@ -1,11 +1,12 @@
-#ifndef textureHolder_h
-#define textureHolder_h
+#ifndef textureholder_h
+#define textureholder_h
 
 #include <SFML/Graphics.hpp>
 #include <map>
 
 using namespace sf;
 using namespace std;
+
 class TextureHolder
 {
 public:
@@ -17,6 +18,4 @@ private:
 
 	static TextureHolder* m_s_Instance;
 };
-
-
-#endif // !1
+#endif 

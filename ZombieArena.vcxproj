@@ -49,12 +49,15 @@
     <ClCompile Include="src\createBackground.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\player.cpp" />
-    <ClCompile Include="TextureHolder.cpp" />
+    <ClCompile Include="src\TextureHolder.cpp" />
+    <ClCompile Include="src\Zombie.cpp" />
+    <ClCompile Include="src\zombieHorde.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\player.h" />
+    <ClInclude Include="src\TextureHolder.h" />
+    <ClInclude Include="src\Zombie.h" />
     <ClInclude Include="src\ZombieArena.h" />
-    <ClInclude Include="TextureHolder.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

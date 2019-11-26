@@ -189,6 +189,15 @@ int main()
 			Vector2f playerPosition(player.getCenter());
 			mainView.setCenter(player.getCenter());
 
+			//loop through each zombie and update them if alive
+			for (int i = 0; i < numZombies; i++) 
+			{
+				if (zombies[i].isAlive()) 
+				{
+					zombies[i].update(dt.asSeconds(), playerPosition);
+				}
+			}
+
 		}
 
 		/*
@@ -204,6 +213,10 @@ int main()
 			window.setView(mainView);
 
 			window.draw(background, &textureBackground);
+			for (int i = 0; i < numZombies; i++)
+			{
+				window.draw(zombies[i].getSprite());
+			}
 			window.draw(player.getSprite());
 		}
 		if (state == State::LEVELING_UP)
@@ -223,6 +236,7 @@ int main()
 	}// end of game loop
 
 
+	delete[] zombies;
 
 	return 0;
 }

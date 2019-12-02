@@ -46,6 +46,7 @@
     <Media Include="resources\sound\splat.wav" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\pickup.cpp" />
     <ClCompile Include="src\bullet.cpp" />
     <ClCompile Include="src\createBackground.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -55,6 +56,7 @@
     <ClCompile Include="src\zombieHorde.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\pickup.h" />
     <ClInclude Include="src\bullet.h" />
     <ClInclude Include="src\player.h" />
     <ClInclude Include="src\TextureHolder.h" />

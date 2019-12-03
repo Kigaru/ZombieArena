@@ -31,6 +31,20 @@
     <Media Include="resources\sound\splat.wav" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="resources\discord-api\achievement_manager.cpp" />
+    <ClCompile Include="resources\discord-api\activity_manager.cpp" />
+    <ClCompile Include="resources\discord-api\application_manager.cpp" />
+    <ClCompile Include="resources\discord-api\core.cpp" />
+    <ClCompile Include="resources\discord-api\image_manager.cpp" />
+    <ClCompile Include="resources\discord-api\lobby_manager.cpp" />
+    <ClCompile Include="resources\discord-api\network_manager.cpp" />
+    <ClCompile Include="resources\discord-api\overlay_manager.cpp" />
+    <ClCompile Include="resources\discord-api\relationship_manager.cpp" />
+    <ClCompile Include="resources\discord-api\storage_manager.cpp" />
+    <ClCompile Include="resources\discord-api\store_manager.cpp" />
+    <ClCompile Include="resources\discord-api\types.cpp" />
+    <ClCompile Include="resources\discord-api\user_manager.cpp" />
+    <ClCompile Include="resources\discord-api\voice_manager.cpp" />
     <ClCompile Include="src\pickup.cpp" />
     <ClCompile Include="src\bullet.cpp" />
     <ClCompile Include="src\createBackground.cpp" />
@@ -41,6 +55,23 @@
     <ClCompile Include="src\zombieHorde.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resources\discord-api\achievement_manager.h" />
+    <ClInclude Include="resources\discord-api\activity_manager.h" />
+    <ClInclude Include="resources\discord-api\application_manager.h" />
+    <ClInclude Include="resources\discord-api\core.h" />
+    <ClInclude Include="resources\discord-api\discord.h" />
+    <ClInclude Include="resources\discord-api\event.h" />
+    <ClInclude Include="resources\discord-api\ffi.h" />
+    <ClInclude Include="resources\discord-api\image_manager.h" />
+    <ClInclude Include="resources\discord-api\lobby_manager.h" />
+    <ClInclude Include="resources\discord-api\network_manager.h" />
+    <ClInclude Include="resources\discord-api\overlay_manager.h" />
+    <ClInclude Include="resources\discord-api\relationship_manager.h" />
+    <ClInclude Include="resources\discord-api\storage_manager.h" />
+    <ClInclude Include="resources\discord-api\store_manager.h" />
+    <ClInclude Include="resources\discord-api\types.h" />
+    <ClInclude Include="resources\discord-api\user_manager.h" />
+    <ClInclude Include="resources\discord-api\voice_manager.h" />
     <ClInclude Include="src\pickup.h" />
     <ClInclude Include="src\bullet.h" />
     <ClInclude Include="src\player.h" />
@@ -127,8 +158,8 @@
       <AdditionalIncludeDirectories>C:\dev\SFML-2.5.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\dev\SFML-2.5.1\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-audio-d.lib;sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\dev\SFML-2.5.1\lib;C:\dev\discord_game_sdk\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>discord_game_sdk.dll.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-system-d.lib;sfml-window-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

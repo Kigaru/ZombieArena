@@ -8,10 +8,22 @@
 #include "pickup.h"
 #include <sstream>
 #include <fstream>
+#include <string>
+#include "../resources/discord-api/discord.h"
 using namespace sf;
 
 int main() 
 {
+	//discord code
+	discord::Core* core{};
+	discord::Core::Create(475090671884042251, DiscordCreateFlags_Default, &core);
+
+	discord::Activity activity{};
+	activity.SetState("test123");
+	float frameUpdate = 0;
+	core->ActivityManager().UpdateActivity(activity, [](discord::Result result) {}); //TO UPDATE THE STATE USE THIS
+	//end of discord
+
 	TextureHolder holder;
 
 	enum class State
@@ -410,7 +422,7 @@ int main()
 			{
 				player.stopRight();
 			}
-			if (Keyboard::isKeyPressed(Keyboard::P))
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 			{
 				if(gameTimeTotal.asMilliseconds() - lastPressed.asMilliseconds() > 1000 / fireRate && bulletsInClip > 0) 
 				{
@@ -433,12 +445,11 @@ int main()
 		UPDATE THE FRAME
 		****************
 		*/
-
+		Time dt = clock.restart();
+		gameTimeTotal += dt;
+		float dtAsSeconds = dt.asSeconds();
 		if (state == State::PLAYING)
 		{
-			Time dt = clock.restart();
-			gameTimeTotal += dt;
-			float dtAsSeconds = dt.asSeconds();
 
 			//find mouse
 			mouseScreenPosition = Mouse::getPosition(window);
@@ -658,6 +669,46 @@ int main()
 		}
 
 		window.display();
+
+
+
+		/*
+		*************
+		DISCORD STUFF
+		*************
+		*/
+		if (state == State::PLAYING)
+		{
+			string details = "Wave " + std::to_string(wave);
+			activity.SetDetails(details.c_str());
+			string state = "Zombies remaining: " + std::to_string(numZombiesAlive);
+			activity.SetState(state.c_str());
+		}
+		if (state == State::LEVELING_UP)
+		{
+			activity.SetDetails("Powering up...");
+			string state = "Wave " + std::to_string(wave);
+			activity.SetState(state.c_str());
+		}
+		if (state == State::PAUSED)
+		{
+			string details = "Wave " + std::to_string(wave);
+			activity.SetDetails(details.c_str());
+			activity.SetState("AFK");
+		}
+		if (state == State::GAME_OVER)
+		{
+			activity.SetDetails("Game Over");
+			string state = "Hi Score " + std::to_string(hiScore);
+			activity.SetState(state.c_str());
+		}
+		core->ActivityManager().UpdateActivity(activity, [](discord::Result result) {});
+		frameUpdate += dt.asMilliseconds();
+		if(frameUpdate > 16) 
+		{
+			frameUpdate = 0;
+			core->RunCallbacks();
+		}
 	}// end of game loop
 
 

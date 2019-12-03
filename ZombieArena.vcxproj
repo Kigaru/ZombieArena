@@ -22,21 +22,6 @@
     <Font Include="resources\fonts\zombiecontrol.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\graphics\ammo_icon.png" />
-    <Image Include="resources\graphics\ammo_pickup.png" />
-    <Image Include="resources\graphics\background 1280-720.png" />
-    <Image Include="resources\graphics\background.png" />
-    <Image Include="resources\graphics\background_sheet.png" />
-    <Image Include="resources\graphics\bloater.png" />
-    <Image Include="resources\graphics\blood.png" />
-    <Image Include="resources\graphics\chaser.png" />
-    <Image Include="resources\graphics\crawler.png" />
-    <Image Include="resources\graphics\crosshair.png" />
-    <Image Include="resources\graphics\health_pickup.png" />
-    <Image Include="resources\graphics\player.png" />
-    <Image Include="resources\graphics\sample.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Media Include="resources\sound\hit.wav" />
     <Media Include="resources\sound\pickup.wav" />
     <Media Include="resources\sound\powerup.wav" />
@@ -62,6 +47,24 @@
     <ClInclude Include="src\TextureHolder.h" />
     <ClInclude Include="src\Zombie.h" />
     <ClInclude Include="src\ZombieArena.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\gamedata\scores.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\graphics\ammo_icon.png" />
+    <Image Include="resources\graphics\ammo_pickup.png" />
+    <Image Include="resources\graphics\background 1280-720.png" />
+    <Image Include="resources\graphics\background.png" />
+    <Image Include="resources\graphics\background_sheet.png" />
+    <Image Include="resources\graphics\bloater.png" />
+    <Image Include="resources\graphics\blood.png" />
+    <Image Include="resources\graphics\chaser.png" />
+    <Image Include="resources\graphics\crawler.png" />
+    <Image Include="resources\graphics\crosshair.png" />
+    <Image Include="resources\graphics\health_pickup.png" />
+    <Image Include="resources\graphics\player.png" />
+    <Image Include="resources\graphics\sample.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

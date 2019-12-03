@@ -24,47 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\graphics\ammo_icon.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\ammo_pickup.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\background 1280-720.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\background.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\background_sheet.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\bloater.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\blood.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\chaser.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\crawler.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\crosshair.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\health_pickup.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\player.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-    <Image Include="resources\graphics\sample.png">
-      <Filter>Resource Files\graphics</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
     <Media Include="resources\sound\hit.wav">
       <Filter>Resource Files\sound</Filter>
     </Media>
@@ -137,5 +96,49 @@
     <Font Include="resources\fonts\zombiecontrol.ttf">
       <Filter>Resource Files\fonts</Filter>
     </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\gamedata\scores.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\graphics\ammo_icon.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\ammo_pickup.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\background 1280-720.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\background.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\background_sheet.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\bloater.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\blood.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\chaser.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\crawler.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\crosshair.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\health_pickup.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\player.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
+    <Image Include="resources\graphics\sample.png">
+      <Filter>Resource Files\graphics</Filter>
+    </Image>
   </ItemGroup>
 </Project>

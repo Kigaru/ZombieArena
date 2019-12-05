@@ -107,9 +107,6 @@
     <ClCompile Include="resources\discord-api\store_manager.cpp">
       <Filter>Resource Files\discord-api\Source</Filter>
     </ClCompile>
-    <ClCompile Include="src\TextureHolder.cpp">
-      <Filter>Resource Files\discord-api\Source</Filter>
-    </ClCompile>
     <ClCompile Include="resources\discord-api\types.cpp">
       <Filter>Resource Files\discord-api\Source</Filter>
     </ClCompile>
@@ -120,6 +117,9 @@
       <Filter>Resource Files\discord-api\Source</Filter>
     </ClCompile>
     <ClCompile Include="src\createBackground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TextureHolder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

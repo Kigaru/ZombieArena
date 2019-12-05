@@ -1,4 +1,5 @@
 #ignore these directories
 .vs/
 Debug/
+Release/
 resources/discord-api

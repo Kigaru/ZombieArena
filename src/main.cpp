@@ -36,10 +36,11 @@ int main()
 
 	//resolution
 	Vector2f resolution;
+	const int fpsCap = 60;
 	resolution.x = VideoMode::getDesktopMode().width;
 	resolution.y = VideoMode::getDesktopMode().height;
 	RenderWindow window(VideoMode(resolution.x, resolution.y), "Zombie Arena", Style::Fullscreen);
-
+	window.setFramerateLimit(fpsCap);
 	//sfml view 
 	View mainView(FloatRect(0, 0, resolution.x, resolution.y));
 
@@ -205,7 +206,7 @@ int main()
 
 	//when did we last update the HUD
 	int framesSinceLastHUDUPdate = 0;
-	int fpsMeasurementFrameInterval = 1000;
+	int fpsMeasurementFrameInterval = 60;
 
 	//sound stuff
 	SoundBuffer hitBuffer;
